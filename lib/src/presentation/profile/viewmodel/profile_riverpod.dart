@@ -1,5 +1,5 @@
 import 'package:ecommercebusiness/src/data/datasource/web_services/logIn_web_services.dart';
-import 'package:ecommercebusiness/src/data/model/user_model.dart';
+import 'package:ecommercebusiness/src/data/model/user/user_model.dart';
 import 'package:ecommercebusiness/src/data/repository/login_repository.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

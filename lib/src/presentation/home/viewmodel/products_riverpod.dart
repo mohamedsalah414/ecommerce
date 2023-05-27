@@ -2,11 +2,11 @@ import 'package:ecommercebusiness/src/data/datasource/web_services/product_web_s
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../data/datasource/web_services/web_services.dart';
-import '../../../data/model/product_model.dart';
+import '../../../data/model/product/product_model.dart';
 import '../../../data/repository/products_repository.dart';
 
 final homeScreenProducts =
-    FutureProvider.family.autoDispose<List<ProductModel>, Map<String, String>>(
+    FutureProvider.family<List<ProductModel>, Map<String, String>>(
   (ref, params) async {
     final productsRiverPod = HomeScreenProductsRiverPod(
       ProductRepository(ProductWebServices(WebServices())),

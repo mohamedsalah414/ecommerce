@@ -4,7 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../data/datasource/web_services/web_services.dart';
 import '../../../data/repository/products_repository.dart';
 
-final categories = FutureProvider.autoDispose<List<String>>((ref) async {
+final categories = FutureProvider<List<String>>((ref) async {
   final categoriesRiverPod =
       CategoriesRiverPod(ProductRepository(ProductWebServices(WebServices())));
   final data = await categoriesRiverPod.getAllCategories();

@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:ecommercebusiness/src/data/model/user_model.dart';
+import 'package:ecommercebusiness/src/data/model/user/user_model.dart';
 
 import '../datasource/web_services/logIn_web_services.dart';
 

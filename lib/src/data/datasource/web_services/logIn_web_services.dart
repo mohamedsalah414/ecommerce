@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:ecommercebusiness/src/data/datasource/web_services/web_services.dart';
-import 'package:ecommercebusiness/src/data/model/user_model.dart';
+import 'package:ecommercebusiness/src/data/model/user/user_model.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/services/shared_preferences.dart';

@@ -1,5 +1,5 @@
 import 'package:ecommercebusiness/src/data/datasource/web_services/product_web_services.dart';
-import 'package:ecommercebusiness/src/data/model/product_model.dart';
+import 'package:ecommercebusiness/src/data/model/product/product_model.dart';
 
 class ProductRepository {
   final ProductWebServices productWebServices;

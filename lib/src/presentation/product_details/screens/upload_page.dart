@@ -22,16 +22,12 @@ class _UploadImageState extends ConsumerState<UploadImagePage> {
   void initState() {
     super.initState();
     imagePicker = ImagePicker();
-    // ref.read(upload);
-    // ref.read(image);
   }
 
   bool switchCameraOrGallery = false;
   String type = 'gallery';
   @override
   Widget build(BuildContext context) {
-    // final up = ref.watch(upload);
-    // final img = ref.watch(image);
     return Scaffold(
         resizeToAvoidBottomInset: false,
         appBar: AppBar(),
@@ -41,7 +37,7 @@ class _UploadImageState extends ConsumerState<UploadImagePage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                TextWidget(txt: 'Switch between camera and gallery'),
+                const TextWidget(txt: 'Switch between camera and gallery'),
                 SwitchListTile(
                   title: TextWidget(txt: type.capitalize()),
                   value: switchCameraOrGallery,
@@ -98,10 +94,6 @@ class _UploadImageState extends ConsumerState<UploadImagePage> {
                     width: MediaQuery.of(context).size.width / 2,
                     child: ElevatedButton(
                       onPressed: () {
-                        // up.uploadImage(path).then((value) {
-                        //   Navigator.of(context).pop();
-                        //   // ref.refresh(image).init();
-                        // });
                         Navigator.of(context).pop(_image);
                       },
                       child: const Text(

@@ -1,5 +1,5 @@
-import 'package:ecommercebusiness/src/data/model/cart_model.dart';
-import 'package:ecommercebusiness/src/data/model/product_model.dart';
+import 'package:ecommercebusiness/src/data/model/cart/cart_model.dart';
+import 'package:ecommercebusiness/src/data/model/product/product_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

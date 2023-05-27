@@ -4,7 +4,7 @@ import 'package:ecommercebusiness/src/presentation/cart/screens/cart_screen.dart
 import 'package:ecommercebusiness/src/presentation/login/screens/logIn_screen.dart';
 import 'package:ecommercebusiness/src/presentation/product_details/screens/product_modify_screen.dart';
 import 'package:ecommercebusiness/src/presentation/profile/viewmodel/profile_riverpod.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:ecommercebusiness/src/presentation/profile/widgets/profile_details_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -29,7 +29,7 @@ class ProfileScreen extends StatelessWidget {
         ],
       ),
       body: Padding(
-        padding: EdgeInsets.all(15),
+        padding: const EdgeInsets.all(15),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -38,47 +38,8 @@ class ProfileScreen extends StatelessWidget {
               final profile = ref.watch(profileDetails);
               return profile.when(
                 data: (data) {
-                  return Column(
-                    children: [
-                      CircleAvatar(
-                        radius: 80,
-                        child: Icon(
-                          CupertinoIcons.profile_circled,
-                          size: 150,
-                        ),
-                      ),
-                      25.ph,
-                      TextWidget(
-                        txt: '${data.name.firstname} ${data.name.lastname}',
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20,
-                      ),
-                      10.ph,
-                      TextWidget(
-                        txt: 'Email: ${data.email}',
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20,
-                      ),
-                      10.ph,
-                      TextWidget(
-                        txt: 'Phone: ${data.phone}',
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20,
-                      ),
-                      10.ph,
-                      TextWidget(
-                        txt: 'Address:',
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20,
-                      ),
-                      5.ph,
-                      TextWidget(
-                        txt:
-                            '${data.address.number}, ${data.address.street}, ${data.address.city}, ${data.address.zipcode}',
-                        fontWeight: FontWeight.normal,
-                        fontSize: 18,
-                      ),
-                    ],
+                  return ProfileDetailsWidget(
+                    data: data,
                   );
                 },
                 error: (error, stackTrace) {
@@ -97,7 +58,7 @@ class ProfileScreen extends StatelessWidget {
             50.ph,
             ElevatedButton.icon(
                 onPressed: () {
-                  context.push(CartScreen());
+                  context.push(const CartScreen());
                 },
                 icon: const Icon(
                   Icons.shopping_cart,

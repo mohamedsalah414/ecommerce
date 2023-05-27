@@ -1,4 +1,4 @@
-import 'package:ecommercebusiness/src/data/model/product_model.dart';
+import 'package:ecommercebusiness/src/data/model/product/product_model.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'cart_model.g.dart';
