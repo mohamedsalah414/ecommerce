@@ -1,6 +1,5 @@
 import 'package:ecommercebusiness/src/core/utils/helper_extenstions.dart';
 import 'package:ecommercebusiness/src/core/widgets/text_widget.dart';
-import 'package:ecommercebusiness/src/data/model/product/product_model.dart';
 import 'package:ecommercebusiness/src/presentation/home/screens/home_screen.dart';
 import 'package:ecommercebusiness/src/presentation/product_details/screens/product_modify_screen.dart';
 import 'package:ecommercebusiness/src/presentation/product_details/viewmodel/product_riverpod.dart';
@@ -24,7 +23,6 @@ class ProductDetailsScreen extends StatefulWidget {
 }
 
 class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
-  ProductModel? dataCallback;
   int quantityForItem = 0;
   @override
   Widget build(BuildContext context) {
@@ -33,18 +31,12 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
         actions: [
           IconButton(
               onPressed: () {
-                Navigator.of(context)
-                    .push(MaterialPageRoute(
+                Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => ProductModifyScreen(
                     id: widget.id,
                     type: 'update',
                   ),
-                ))
-                    .then((value) {
-                  setState(() {
-                    dataCallback = value;
-                  });
-                });
+                ));
               },
               style:
                   IconButton.styleFrom(backgroundColor: AppColor.carolinaBlue),

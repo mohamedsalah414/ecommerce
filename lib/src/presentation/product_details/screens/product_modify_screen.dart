@@ -141,7 +141,17 @@ class _ProductModifyScreenState extends State<ProductModifyScreen> {
               imagePath: imagePath,
               category: selectedCategory)
           .then((value) {
-        Navigator.pop(context, value);
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+            backgroundColor: AppColor.primaryBLue,
+            behavior: SnackBarBehavior.floating,
+            content: TextWidget(
+              txt:
+                  'Success updated new product \ntitle: ${value['title']},\nprice: \$${value['price']},\ncategory: ${value['category']}',
+              color: AppColor.white,
+              fontWeight: FontWeight.bold,
+              fontSize: 18,
+            )));
+        Navigator.pop(context);
       });
     } else {
       modify
