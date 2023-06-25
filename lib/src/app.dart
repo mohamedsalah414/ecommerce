@@ -1,5 +1,5 @@
 import 'package:ecommercebusiness/src/core/utils/app_strings.dart';
-import 'package:ecommercebusiness/src/modules/home/presentation/screens/home_screen.dart';
+import 'package:ecommercebusiness/src/modules/home/presentation/screens/home/home_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'core/themes/app_theme.dart';
@@ -16,7 +16,7 @@ class EcommerceApp extends StatelessWidget {
       themeMode: ThemeMode.light,
       theme: AppTheme.lightThemeData,
       darkTheme: AppTheme.darkThemeData,
-      home: const HomeScreen(),
+      home: const HomeNavigator(),
     );
   }
 }

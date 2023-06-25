@@ -1,7 +1,7 @@
 import 'package:ecommercebusiness/src/core/utils/app_colors.dart';
 import 'package:ecommercebusiness/src/core/utils/helper_extenstions.dart';
 import 'package:ecommercebusiness/src/core/widgets/text_widget.dart';
-import 'package:ecommercebusiness/src/modules/home/presentation/screens/home_screen.dart';
+import 'package:ecommercebusiness/src/modules/home/presentation/screens/products/products_screen.dart';
 import 'package:ecommercebusiness/src/modules/product_details/presentation/screens/product_modify_screen.dart';
 import 'package:ecommercebusiness/src/modules/product_details/presentation/viewmodel/product_riverpod.dart';
 import 'package:ecommercebusiness/src/modules/product_details/presentation/widgets/product_details_widget.dart';

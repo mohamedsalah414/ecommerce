@@ -1,7 +1,7 @@
 import 'package:ecommercebusiness/src/core/services/shared_preferences.dart';
+import 'package:ecommercebusiness/src/core/utils/app_colors.dart';
 import 'package:ecommercebusiness/src/core/utils/helper_extenstions.dart';
 import 'package:ecommercebusiness/src/core/widgets/text_widget.dart';
-import 'package:ecommercebusiness/src/modules/cart/presentation/screens/cart_screen.dart';
 import 'package:ecommercebusiness/src/modules/login/presentation/screens/logIn_screen.dart';
 import 'package:ecommercebusiness/src/modules/product_details/presentation/screens/product_modify_screen.dart';
 import 'package:ecommercebusiness/src/modules/profile/presentation/viewmodel/profile_riverpod.dart';
@@ -16,16 +16,7 @@ class ProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        actions: [
-          ElevatedButton.icon(
-              onPressed: () {
-                context.pushAndRemoveUntil(const LogInScreen());
-                SharedPreferencesService.getInstance()
-                    .then((value) => value.clear());
-              },
-              icon: const Icon(Icons.logout),
-              label: const TextWidget(txt: 'Log out')),
-        ],
+        actions: [],
       ),
       body: Padding(
         padding: const EdgeInsets.all(15),
@@ -55,20 +46,20 @@ class ProfileScreen extends StatelessWidget {
               );
             }),
             50.ph,
-            ElevatedButton.icon(
-                onPressed: () {
-                  context.push(const CartScreen());
-                },
-                icon: const Icon(
-                  Icons.shopping_cart,
-                  size: 30,
-                ),
-                label: const TextWidget(
-                  txt: 'My Cart',
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20,
-                )),
-            25.ph,
+            // ElevatedButton.icon(
+            //     onPressed: () {
+            //       context.push(const CartScreen());
+            //     },
+            //     icon: const Icon(
+            //       Icons.shopping_cart,
+            //       size: 30,
+            //     ),
+            //     label: const TextWidget(
+            //       txt: 'My Cart',
+            //       fontWeight: FontWeight.bold,
+            //       fontSize: 20,
+            //     )),
+            // 25.ph,
             ElevatedButton.icon(
                 onPressed: () {
                   context.push(const ProductModifyScreen(type: 'create'));
@@ -79,6 +70,24 @@ class ProfileScreen extends StatelessWidget {
                 ),
                 label: const TextWidget(
                   txt: 'Add Product',
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                )),
+            25.ph,
+            ElevatedButton.icon(
+                onPressed: () {
+                  context.pushAndRemoveUntil(const LogInScreen());
+                  SharedPreferencesService.getInstance()
+                      .then((value) => value.clear());
+                },
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: AppColor.carolinaBlue),
+                icon: const Icon(
+                  Icons.logout,
+                  size: 30,
+                ),
+                label: const TextWidget(
+                  txt: 'Log out',
                   fontWeight: FontWeight.bold,
                   fontSize: 20,
                 )),

@@ -1,5 +1,6 @@
 import 'package:ecommercebusiness/src/core/widgets/text_widget.dart';
 import 'package:ecommercebusiness/src/modules/cart/presentation/viewmodel/cart_riverpod.dart';
+import 'package:ecommercebusiness/src/modules/cart/presentation/widgets/empty_cart_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -19,7 +20,9 @@ class CartScreen extends StatelessWidget {
       ),
       body: Consumer(builder: (context, ref, child) {
         final cartItems = ref.watch(cart);
-        return CartListWidget(cartItems: cartItems);
+        return cartItems.productItems.isNotEmpty
+            ? CartListWidget(cartItems: cartItems)
+            : const EmptyCartWidget();
       }),
     );
   }

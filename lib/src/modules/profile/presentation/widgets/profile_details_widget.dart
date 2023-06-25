@@ -30,22 +30,22 @@ class ProfileDetailsWidget extends StatelessWidget {
         ),
         10.ph,
         TextWidget(
-          txt: 'Email: ${data.email}',
+          txt: '${data.email}',
           fontWeight: FontWeight.bold,
           fontSize: 20,
         ),
         10.ph,
         TextWidget(
-          txt: 'Phone: ${data.phone}',
+          txt: '${data.phone}',
           fontWeight: FontWeight.bold,
           fontSize: 20,
         ),
         10.ph,
-        const TextWidget(
-          txt: 'Address:',
-          fontWeight: FontWeight.bold,
-          fontSize: 20,
-        ),
+        // const TextWidget(
+        //   txt: 'Address:',
+        //   fontWeight: FontWeight.bold,
+        //   fontSize: 20,
+        // ),
         5.ph,
         TextWidget(
           txt:

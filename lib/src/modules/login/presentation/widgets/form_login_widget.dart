@@ -2,7 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:ecommercebusiness/src/core/utils/app_colors.dart';
 import 'package:ecommercebusiness/src/core/utils/helper_extenstions.dart';
 import 'package:ecommercebusiness/src/core/widgets/text_widget.dart';
-import 'package:ecommercebusiness/src/modules/home/presentation/screens/home_screen.dart';
+import 'package:ecommercebusiness/src/modules/home/presentation/screens/products/products_screen.dart';
 import 'package:ecommercebusiness/src/modules/login/presentation/viewmodel/login_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

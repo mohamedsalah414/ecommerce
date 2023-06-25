@@ -10,5 +10,7 @@ class AppStrings {
 
   static const choosePeriod = 'Choose period of time';
   static const appName = 'e-commerce business';
+  static const emptyCartSvgPath = 'assets/svg/empty_cart.svg';
+  static const emptyCartSvgTitle = 'The cart is empty';
   static const appFont = '';
 }
